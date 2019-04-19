@@ -1,0 +1,19 @@
+.post{
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #3D1834;
+    border-radius: 5px;
+    display: flex;
+    justify-items: center;
+}
+.post_img{
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    background-color: #ffc5fa;
+    margin-right: 30px;
+}
+.post_text p{
+    color: #ffc5fa;
+    font-size: 16px;
+}

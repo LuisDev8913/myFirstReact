@@ -1,0 +1,29 @@
+p{
+    color: #ffc5fa;
+    font-size: 16px;
+}
+.addpost{
+    width: 50%;
+    padding: 20px;
+}
+.addpost textarea{
+    font-size: 16px;
+    width: 70%;
+    padding: 20px;
+    border-radius: 10px;
+    outline: none;
+    background-color: antiquewhite;
+}
+.addpost button{
+    padding: 10px 20px;
+    display: block;
+    background-color: #bfc8ed;
+    font-weight: bold;
+    outline-color: #3d0527;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 1px solid #faf97a ;
+}
+h3{
+    padding-left: 20px;
+}

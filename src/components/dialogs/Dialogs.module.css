@@ -1,0 +1,78 @@
+.dialogs{
+    color: #880766;
+    display: flex;
+    justify-content: space-around;
+    height: 60vh;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.personname{
+    background-color: #92405c;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 50%;
+}
+.item{
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.item a{
+    color: #fbdff9;
+}
+.item a:hover{
+    color: #faf97a;
+}
+.messages{
+    padding: 20px;
+    background: #524549;
+    width: 100%;
+}
+.message{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #fbdff9;
+    max-width: 400px;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.MyMessageInput{
+    padding: 10px;
+    max-width: 400px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #dae3e9;
+}
+.containertext{
+    background-color: lightgoldenrodyellow;
+    padding: 5vh 20px 5vh;
+
+}
+.containertext textarea{
+    font-size: 16px;
+    width: 50%;
+    padding: 10px 25px;
+    border-radius: 10px;
+    outline: none;
+    background-color: antiquewhite;
+}
+.containertext button{
+    padding: 10px 20px;
+    display: block;
+    background-color: #e78cf7;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 1px solid #faf97a ;
+    margin-top: 30px;
+}

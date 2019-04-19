@@ -1,0 +1,13 @@
+.social{
+    margin-top: 220px;
+    text-align: left;
+}
+.social h3{
+    color: #92405c;
+    font-size: 18px;
+    padding-left: 5px;
+}
+.social ul{
+    display: flex;
+
+}

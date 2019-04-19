@@ -1,0 +1,10 @@
+.header{
+    background: #f6ebf5;;
+    grid-area: header;
+    text-align: center;
+    font-weight: bold;
+}
+.header_p{
+    color: #3d2d3a;
+    font-size: 30px;
+}

@@ -1,0 +1,27 @@
+.sitebar{
+    grid-area: nav;
+    font-size: 18px;
+    font-weight: bold;
+    background: #c7d0d6;
+    height: 100%;
+    color: #3d0527;
+}
+.sitebar ul{
+    list-style: none;
+}
+.sitebar ul li{
+    margin-bottom: 12px;
+}
+.sitebar a{
+    cursor: pointer;
+    color: #ffc5fa;
+}
+a:hover{
+    color: #faf97a;
+}
+.sitebar a.active{
+    color: hotpink;
+}
+img{
+    margin-right: 10px;
+}

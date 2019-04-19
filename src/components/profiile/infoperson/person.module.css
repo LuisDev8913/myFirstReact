@@ -1,0 +1,19 @@
+.person{
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: #3D1834;
+    border-radius: 5px;
+    display: flex;
+    justify-items: center;
+}
+.im_person{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #ffc5fa;
+    margin-right: 30px;
+}
+.person_info p{
+    color: #ffc5fa;
+    font-size: 16px;
+}

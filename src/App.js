@@ -1,28 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/header/Header';
+import Profile from './components/profiile/profile';
+import Sidebar from './components/sitebar/sitebar';
+import Dialogs from './components/dialogs/dialogs';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import  './App.css';
 
-class App extends Component {
-  render() {
+
+
+const App = (props) => {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <BrowserRouter>
+            <div className="grid">
+                <Header/>
+                <Sidebar/>
+                <div className="app_content">
+                    <Switch>
+                        <Route path='/dialogs' render={() => <Dialogs state={props.state.dialogspage}/>} />
+                        <Route path='/profile' render={() => <Profile profilepage={props.state.profilepage} dispatch={props.dispatch} />} />
+                    </Switch>
+                </div>
+            </div>
+        </BrowserRouter>
     );
-  }
-}
+};
 
 export default App;
