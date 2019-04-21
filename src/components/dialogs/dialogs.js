@@ -9,27 +9,32 @@ import CreateMessagePerson from  './../dialogs/CreateMessagePerson/CreateMessage
 const Dialogs =(props)=>{
 
 
-    let NewArray = props.state.dialogsData.map(
+    let NewArray = props.dialogspage.dialogsData.map(
         dialog => (<DialogItem name={dialog.name} id={dialog.id}/>)
     );
 
-    let NewMessage = props.state.messageData.map(
+    let NewMessage = props.dialogspage.messageData.map(
         sms => (<MessageItem sms={sms.sms}/>)
     );
+
+    let DialogSingle = props.dialogspage.DialogArr.map(t => <MyMessageInput post={t.dialogPost} id={t.id}/>);
 
 
     return (
         <div className={DialogCSS.header}>
             <div className={DialogCSS.dialogs}>
                 <div className={`${DialogCSS.messages} ${DialogCSS.clearfix}`}>
-                    <div className={DialogCSS.left}><MyMessageInput/></div>
+                    <div className={DialogCSS.left}>{DialogSingle}</div>
                     <div className={DialogCSS.right}>{NewMessage}</div>
                 </div>
                 <div className={DialogCSS.personname}>
                     {NewArray}
                 </div>
             </div>
-            <CreateMessagePerson/>
+            <CreateMessagePerson dialogspage={props.state}
+                                 dispatch={props.dispatch}
+                                 NewDialog={props.dialogspage.NewDialog}
+            />
         </div>
     );
 };

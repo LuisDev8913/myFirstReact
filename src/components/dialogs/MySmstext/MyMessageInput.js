@@ -5,7 +5,7 @@ const MyMessageInput= (props)=>{
     return(
         <div>
             <div className={DialogCSS.MyMessageInput}>
-                hjgjhgjgjаааааааааааааааа
+                {props.dialogPost}
             </div>
         </div>
     );

@@ -23,7 +23,7 @@ let store ={
                 {id: 2, name:'Tony Stark'}
             ],
             DialogArr:[
-                {dialogPost:'', id:1}
+                {dialogPost:'jj', id:1}
             ],
             NewDialog:'This my Text!Cool!'
         }

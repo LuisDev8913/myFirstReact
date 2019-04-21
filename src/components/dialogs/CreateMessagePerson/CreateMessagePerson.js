@@ -1,24 +1,26 @@
 import React from 'react';
 import DialogCSS from './../Dialogs.module.css';
-
+import {UpdateDialogText,AddDialog} from "../../../redux/state"
 
 const CreateMessagePerson = (props)=>{
 
-    /*let onDialogChange =(e)=>{
-        let dialog = e.target.value;
-        props.store.dispatch(UpdateDialogText(dialog)) ;
+    let NewDialogElement = React.createRef();
+
+    let onDialogChange =()=>{
+        let dialog = NewDialogElement.current.value;
+        props.dispatch(UpdateDialogText(dialog)) ;
     };
     let OneDialog = () =>{
-        props.store.dispatch(AddDialog());
-    };*/
+        props.dispatch(AddDialog());
+    };
     return(
         <div className={DialogCSS.containertext}>
             <div>
                 <div>
-                    <textarea></textarea>
+                    <textarea onChange={onDialogChange} ref={NewDialogElement} value={props.NewDialog}/>
                 </div>
                 <div>
-                    <button >Add a message</button>
+                    <button onClick={OneDialog}>Add a message</button>
                 </div>
             </div>
         </div>
