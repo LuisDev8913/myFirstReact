@@ -8,6 +8,7 @@ import  './App.css';
 
 
 
+
 const App = (props) => {
     return (
         <BrowserRouter>
@@ -17,7 +18,7 @@ const App = (props) => {
                 <div className="app_content">
                     <Switch>
                         <Route path='/dialogs' render={() => <Dialogs dialogspage={props.state.dialogspage} dispatch={props.dispatch}/>} />
-                        <Route path='/profile' render={() => <Profile profilepage={props.state.profilepage} dispatch={props.dispatch}/>} />
+                        <Route path='/profile' render={() => <Profile store={props.store}/>} />
                     </Switch>
                 </div>
             </div>

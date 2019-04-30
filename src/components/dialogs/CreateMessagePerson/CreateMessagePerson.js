@@ -1,6 +1,6 @@
 import React from 'react';
 import DialogCSS from './../Dialogs.module.css';
-import {UpdateDialogText,AddDialog} from "../../../redux/state"
+import {UpdateDialogText,AddDialog} from "../../../redux/dialogspage-reducer"
 
 const CreateMessagePerson = (props)=>{
 

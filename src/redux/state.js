@@ -1,7 +1,6 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const ADD_DIAlOG = 'ADD-DIALOG';
-const UPDATE_DIALOG_TEXT = 'UPDATE-DIALOG-TEXT';
+import dialogsReducer from "./dialogspage-reducer";
+import profileReducer from "./profilepage-reducer";
+
 
 let store ={
     _state: {
@@ -38,52 +37,12 @@ let store ={
         this._callSubscriber = observer;
     },
     dispatch(action){
-        if(action.type === ADD_POST){
-            let NewPost = {
-                post: this._state.profilepage.NewPostText,
-                id: 5
-            };
-            this._state.profilepage.PostArr.push(NewPost);
-            this._state.profilepage.NewPostText = '';
-            this._callSubscriber(this._state);
-        }else if(action.type === UPDATE_NEW_POST_TEXT){
-            this._state.profilepage.NewPostText = action.newText;
-            this._callSubscriber(this._state);
-
-        }else if(action.type === ADD_DIAlOG){
-            let NewDialogPost = {
-                post: this._state.dialogspage.NewDialog,
-                id: 5
-            };
-            this._state.dialogspage.DialogArr.push(NewDialogPost);
-            this._state.dialogspage.NewDialog = '';
-            this._callSubscriber(this._state);
-        }else if(action.type === UPDATE_DIALOG_TEXT){
-            this._state.dialogspage.NewDialog = action.newText;
-            this._callSubscriber(this._state);
-        }
+        this._state.dialogspage = dialogsReducer(this._state.dialogspage, action);
+        this._state.profilepage = profileReducer(this._state.profilepage,action);
+        this._callSubscriber(this._state);
     }
 };
 
- export const  addPostActionCreator = ()=>{
-    return{
-        type: ADD_POST
-    }
-};
-export const  updateNewPostActionCreator = (text)=>{
-    return{
-        type: UPDATE_NEW_POST_TEXT, newText:text
-    }
-};
-export const  AddDialog = ()=>{
-    return{
-        type: ADD_DIAlOG
-    }
-};
-export const  UpdateDialogText  = (dialog)=>{
-    return{
-        type: UPDATE_DIALOG_TEXT , newText:dialog
-    }
-};
+
 
 export default store;

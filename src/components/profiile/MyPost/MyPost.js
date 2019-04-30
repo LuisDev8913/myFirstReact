@@ -1,7 +1,7 @@
 import React from 'react';
 import PostCSS from './Mypost.module.css';
 import Post from './SinglePost/Post';
-import {addPostActionCreator,updateNewPostActionCreator} from "../../../redux/state"
+
 
 
 
@@ -10,11 +10,11 @@ const MyPost =(props)=>{
 
     let onPostChange =()=>{
         let text = NewPostElement.current.value;
-        props.dispatch(updateNewPostActionCreator(text)) ;
+        props.updateNewPostText(text);
     };
 
     let OnePost = () =>{
-        props.dispatch(addPostActionCreator());
+        props.OnePost();
     };
 
     let postSingle =

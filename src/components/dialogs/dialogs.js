@@ -17,7 +17,7 @@ const Dialogs =(props)=>{
         sms => (<MessageItem sms={sms.sms}/>)
     );
 
-    let DialogSingle = props.dialogspage.DialogArr.map(t => <MyMessageInput post={t.dialogPost} id={t.id}/>);
+    let DialogSingle = props.dialogspage.DialogArr.map(t => <MyMessageInput dialogPost={t.dialogPost} id={t.id}/>);
 
 
     return (

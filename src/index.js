@@ -1,5 +1,5 @@
 import * as serviceWorker from './serviceWorker';
-import store from './redux/state';
+import store from './redux/redux-store';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -10,13 +10,16 @@ let rerenderDomTree =(state)=>{
     ReactDOM.render(
         <BrowserRouter>
             <App state={state}
-                 dispatch={store.dispatch.bind(store)}/>
+                 dispatch={store.dispatch.bind(store)} store={store}/>
         </BrowserRouter>, document.getElementById('root'));
 };
 
 
 rerenderDomTree(store.getState());
 
-store.subscribe(rerenderDomTree);
+store.subscribe(() =>{
+    let state = store.getState();
+    rerenderDomTree(state);
+});
 
 serviceWorker.unregister();
